@@ -1,8 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from "@reduxjs/toolkit"
+import moviesReducer from "../components/movies/moviesSlice"
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    movies: moviesReducer,
   },
-});
+})
