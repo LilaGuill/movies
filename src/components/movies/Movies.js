@@ -9,7 +9,7 @@ const Movies = () => {
   const dispatch = useDispatch()
 
   const moviesDetails = movies.map(
-    ({ id, title, category, likes, dislikes }) => {
+    ({ id, title, category, likes, dislikes }, index) => {
       return (
         <div key={id}>
           <Movie>
@@ -17,7 +17,9 @@ const Movies = () => {
             <div>{category}</div>
             <div>{likes}</div>
             <div>{dislikes}</div>
-            <button onClick={() => dispatch(deleteMovie(id))}>Delete</button>
+            <button onClick={() => dispatch(deleteMovie({ index }))}>
+              Delete
+            </button>
           </Movie>
         </div>
       )
