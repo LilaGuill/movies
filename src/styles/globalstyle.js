@@ -25,6 +25,11 @@ time, mark, audio, video {
 a {
 	color:black;
 }
+button{
+	border:none;
+	border-radius:5px;
+	padding: 5px 20px;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -54,6 +59,30 @@ table {
 }
 html, body, #root {
   height: 100%;
+}
+
+h2{
+  font-size:24px;
+  font-weight:bold;
+}
+h3{
+  font-size:22px;
+  font-weight:bold;
+}
+
+h4{
+  font-size:20px;
+  font-weight:bold;
+}
+
+h5{
+  font-size:18px;
+  font-weight:bold;
+}
+
+h5{
+  font-size:16px;
+  font-weight:bold;
 }
 `
 

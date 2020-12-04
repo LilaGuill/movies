@@ -5,7 +5,7 @@ const StyledMovie = styled.div`
   height: 200px;
   background: white;
   margin: 20px;
-  border-radius: ${(props) => props.theme.borderRadius};
-  box-shadow: ${(props) => props.theme.boxShadow};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  box-shadow: ${({ theme }) => theme.boxShadow};
 `
 export default StyledMovie

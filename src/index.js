@@ -11,7 +11,7 @@ import "./styles/index.css"
 const theme = {
   primaryColor: "#0a043c",
   secondaryColor: "#03506f",
-  redColor: "#f05454",
+  redColor: "#EE225F",
   borderRadius: "6px",
   transition: "0.3s ease-in-out",
   boxShadow: "0 0 8px rgba(140, 140, 140, 0.1)",

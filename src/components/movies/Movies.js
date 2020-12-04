@@ -1,32 +1,29 @@
 import React from "react"
-import { useSelector, useDispatch } from "react-redux"
-import { deleteMovie, selectMovies } from "./moviesSlice"
+import { useSelector } from "react-redux"
+import { selectMovies } from "./moviesSlice"
 import Movie from "../movie/Movie"
 import StyledMovies from "./StyledMovies"
 
 const Movies = () => {
   const movies = useSelector(selectMovies)
-  const dispatch = useDispatch()
 
-  const moviesDetails = movies.map(
-    ({ id, title, category, likes, dislikes }, index) => {
-      return (
-        <div key={id}>
-          <Movie>
-            <div>{title}</div>
-            <div>{category}</div>
-            <div>{likes}</div>
-            <div>{dislikes}</div>
-            <button onClick={() => dispatch(deleteMovie({ index }))}>
-              Delete
-            </button>
-          </Movie>
-        </div>
-      )
-    }
+  return (
+    <StyledMovies>
+      {movies.map(({ id, title, category, likes, dislikes }, index) => {
+        return (
+          <div key={id} className="movie-card">
+            <Movie
+              title={title}
+              category={category}
+              likes={likes}
+              dislikes={dislikes}
+              index={index}
+            ></Movie>
+          </div>
+        )
+      })}
+    </StyledMovies>
   )
-
-  return <StyledMovies>{moviesDetails}</StyledMovies>
 }
 
 export default Movies
