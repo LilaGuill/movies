@@ -7,13 +7,23 @@ export const moviesSlice = createSlice({
     value: moviesList,
   },
   reducers: {
-    deleteMovie: (state, action) => {
-      state.value.splice(action.payload.index, 1)
+    like: (state, action) => {
+      state.value[action.payload.index].likes += 1
+    },
+    dislike: (state, action) => {
+      state.value[action.payload.index].dislikes -= 1
+    },
+    removeMovie: (state, action) => {
+      const indexToRemove = state.value.findIndex(
+        ({ id }) => action.payload.id === id
+      )
+
+      state.value.splice(indexToRemove, 1)
     },
   },
 })
 
-export const { deleteMovie } = moviesSlice.actions
+export const { removeMovie, like, dislike } = moviesSlice.actions
 
 export const selectMovies = (state) => state.movies.value
 
