@@ -1,9 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./App"
 import { Provider } from "react-redux"
-import store from "./app/store"
 import { ThemeProvider } from "styled-components"
+import App from "./App"
+import store from "./app/store"
 import * as serviceWorker from "./serviceWorker"
 import GlobalStyle from "./styles/globalstyle"
 import "./styles/index.css"
@@ -11,7 +11,7 @@ import "./styles/index.css"
 const theme = {
   primaryColor: "#0a043c",
   secondaryColor: "#03506f",
-  redColor: "#f05454",
+  redColor: "#ed2654",
   borderRadius: "6px",
   transition: "0.3s ease-in-out",
   boxShadow: "0 0 8px rgba(140, 140, 140, 0.1)",

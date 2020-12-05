@@ -1,30 +1,34 @@
 import React from "react"
-import { useSelector, useDispatch } from "react-redux"
-import { deleteMovie, selectMovies } from "./moviesSlice"
+import { useSelector } from "react-redux"
+import { selectMovies, removeMovie } from "./moviesSlice"
+import { selectFilters } from "../filters/filtersSlice"
 import Movie from "../movie/Movie"
 import StyledMovies from "./StyledMovies"
+import SelectField from "../filters/Filters"
 
 const Movies = () => {
   const movies = useSelector(selectMovies)
-  const dispatch = useDispatch()
+  const filters = useSelector(selectFilters)
 
-  const moviesDetails = movies.map(
-    ({ id, title, category, likes, dislikes }) => {
+  const moviesList = movies
+    .filter(({ category }) =>
+      filters.length ? filters.includes(category) : true
+    )
+    .map((movie) => {
       return (
-        <div key={id}>
-          <Movie>
-            <div>{title}</div>
-            <div>{category}</div>
-            <div>{likes}</div>
-            <div>{dislikes}</div>
-            <button onClick={() => dispatch(deleteMovie(id))}>Delete</button>
-          </Movie>
+        //remove div
+        <div key={movie.id} className="movie-card">
+          <Movie {...movie} removeMovie={removeMovie} />
         </div>
       )
-    }
-  )
+    })
 
-  return <StyledMovies>{moviesDetails}</StyledMovies>
+  return (
+    <>
+      <SelectField movies={movies} />
+      <StyledMovies>{moviesList}</StyledMovies>
+    </>
+  )
 }
 
 export default Movies
