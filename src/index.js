@@ -12,9 +12,19 @@ const theme = {
   primaryColor: "#0a043c",
   secondaryColor: "#03506f",
   redColor: "#ed2654",
-  borderRadius: "6px",
+  lightGrey: "#f6f9fb",
+  mediumGrey: "#e4edf3",
+  darkenGrey: "#D3E2EB",
+  blueGrey: "#f6f9fb",
+  borderRadius: "20px",
   transition: "0.3s ease-in-out",
   boxShadow: "0 0 8px rgba(140, 140, 140, 0.1)",
+  border: {
+    color: "#e3e3e3",
+    radius: {
+      large: "20px",
+    },
+  },
 }
 
 ReactDOM.render(

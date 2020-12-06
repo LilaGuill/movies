@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useMemo } from "react"
 import Select from "react-select"
 import { useDispatch } from "react-redux"
 import { updateFilters } from "./filtersSlice"
+import StyledFilters from "./StyledFilters"
 
 const Filters = ({ movies }) => {
   const [options, setOptions] = useState([])
@@ -10,7 +11,6 @@ const Filters = ({ movies }) => {
   const handleChange = (event) => dispatch(updateFilters(event || []))
 
   useEffect(() => {
-    // filtre les catégories disponibles du state à l'affichage du composant
     const categories = movies.reduce((acc, { category }) => {
       const isDuplicate = acc.find(({ value }) => value === category)
       if (!isDuplicate) {
@@ -22,9 +22,14 @@ const Filters = ({ movies }) => {
   }, [movies])
 
   return (
-    <div style={{ width: "400px" }}>
-      <Select options={options} isMulti onChange={handleChange} />
-    </div>
+    <StyledFilters>
+      <Select
+        options={options}
+        isMulti
+        onChange={handleChange}
+        placeholder="Select a category"
+      />
+    </StyledFilters>
   )
 }
 

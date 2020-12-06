@@ -28,7 +28,7 @@ a {
 button{
 	border:none;
 	border-radius:5px;
-	padding: 5px 20px;
+	padding: 10px 20px;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -37,7 +37,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color:#F6F9FB;
+	background-color:white;
   font-family: 'Catamaran';
   color:#0a043c;
   
@@ -61,28 +61,39 @@ html, body, #root {
   height: 100%;
 }
 
-h2{
+h1{
   font-size:24px;
-  font-weight:bold;
+	font-weight:bold;
+
+}
+
+h2{
+  font-size:22px;
+	font-weight:bold;
+
 }
 h3{
-  font-size:22px;
-  font-weight:bold;
+  font-size:20px;
+	font-weight:bold;
+
 }
 
 h4{
-  font-size:20px;
-  font-weight:bold;
-}
-
-h5{
   font-size:18px;
-  font-weight:bold;
+	font-weight:bold;
+
 }
 
 h5{
   font-size:16px;
-  font-weight:bold;
+	font-weight:bold;
+
+}
+
+h6{
+  font-size:14px;
+	font-weight:bold;
+
 }
 `
 
