@@ -1,14 +1,15 @@
 import React from "react"
-import Movies from "./components/movies/Movies"
-import "./styles/App.css"
+import Movies from "./features/displayMovies/movies/Movies"
+import Header from "./components/header/Header"
+import Footer from "./components/footer/Footer"
 
 function App() {
   return (
-    <div className="App">
-      <header>Movies List</header>
+    <>
+      <Header>Header</Header>
       <Movies />
-      <footer>Footer</footer>
-    </div>
+      <Footer>Made by Lila.G</Footer>
+    </>
   )
 }
 
