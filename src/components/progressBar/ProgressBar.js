@@ -1,5 +1,5 @@
 import React from "react"
-import StyledProgress from "./StyledProgressBar"
+import { StyledProgress } from "./StyledProgressBar"
 
 const ProgressBar = ({ likes, dislikes }) => {
   const value = (likes / (likes + dislikes)) * 100

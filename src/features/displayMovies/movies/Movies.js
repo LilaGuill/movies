@@ -3,9 +3,9 @@ import { useSelector } from "react-redux"
 import { selectMovies } from "./moviesSlice"
 import { selectFilters } from "../filters/filtersSlice"
 import Movie from "../movie/Movie"
-import StyledMovies from "./StyledMovies"
-import SelectField from "../filters/Filters"
 import Pagination from "../pagination/pagination"
+import Filters from "../filters/Filters"
+import { StyledMovies } from "./StyledMovies"
 
 const Movies = () => {
   const movies = useSelector(selectMovies)
@@ -23,7 +23,7 @@ const Movies = () => {
 
   return (
     <>
-      <SelectField movies={movies} />
+      <Filters movies={movies} />
       <Pagination
         moviesLength={moviesFiltered.length}
         firstItem={firstItem}

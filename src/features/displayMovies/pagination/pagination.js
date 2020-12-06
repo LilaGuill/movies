@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { StyledPagination, StyledOption } from "./StyledPagination"
 import Button from "../../../components/button/Button"
+import { StyledPagination, StyledOption } from "./StyledPagination"
 
 const options = [4, 8, 12]
 
@@ -37,17 +37,16 @@ const Pagination = ({
     <StyledPagination>
       <div className="options">
         <div>Items per page : </div>
-        {options.map((number) => (
+        {options.map((option) => (
           <StyledOption
-            selected={number === itemsPerPage}
-            key={number}
-            onClick={() => handleItemsPerPage(number)}
+            selected={option === itemsPerPage}
+            key={option}
+            onClick={() => handleItemsPerPage(option)}
           >
-            {number}
+            {option}
           </StyledOption>
         ))}
       </div>
-
       <div className="buttons">
         <Button handleClick={handlePrevious}>Previous</Button>
         <Button handleClick={handleNext}>Next</Button>
