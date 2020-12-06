@@ -11,7 +11,7 @@ import Button from "../../../components/button/Button"
 import Category from "../../../components/category/Category"
 import ProgressBar from "../../../components/progressBar/ProgressBar"
 import Title from "../../../components/title/Title"
-import StyledMovie from "./StyledMovie"
+import { StyledMovie, StyledThumb } from "./StyledMovie"
 
 const Movie = ({ id, title, category, likes, dislikes }) => {
   const [isLiked, setIsLiked] = useState(false)
@@ -54,19 +54,16 @@ const Movie = ({ id, title, category, likes, dislikes }) => {
         </div>
         <div className="like">
           <div className="thumbs">
-            <div
-              onClick={() => handleLike(id)}
-              className={isLiked ? "thumb-selected" : "thumb"}
-            >
+            <StyledThumb onClick={() => handleLike(id)} Selected={isLiked}>
               <span>👍</span> {likes.toLocaleString()}
-            </div>
-            <div
+            </StyledThumb>
+            <StyledThumb
               onClick={() => handleDislike(id)}
-              className={isDisliked ? "thumb-selected" : "thumb"}
+              selected={isDisliked}
             >
               <span className="has-small-margin-top">👎</span>
               {dislikes.toLocaleString()}
-            </div>
+            </StyledThumb>
           </div>
           <ProgressBar likes={likes} dislikes={dislikes} />
         </div>
