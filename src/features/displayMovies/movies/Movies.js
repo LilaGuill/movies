@@ -13,10 +13,11 @@ const Movies = () => {
   const [firstItem, setFirstItem] = useState(1)
   const [lastItem, setLastItem] = useState(12)
 
-  const moviesList = movies
-    .filter((
-      { category } //récupérer la longueur du tableau après filtre pour passer dans pagination
-    ) => (filters.length ? filters.includes(category) : true))
+  const moviesFiltered = movies.filter(({ category }) =>
+    filters.length ? filters.includes(category) : true
+  )
+
+  const moviesList = moviesFiltered
     .filter((_, index) => index >= firstItem - 1 && index <= lastItem - 1)
     .map((movie) => <Movie {...movie} key={movie.id} />)
 
@@ -24,7 +25,7 @@ const Movies = () => {
     <>
       <SelectField movies={movies} />
       <Pagination
-        moviesLength={movies.length}
+        moviesLength={moviesFiltered.length}
         firstItem={firstItem}
         setFirstItem={setFirstItem}
         lastItem={lastItem}
