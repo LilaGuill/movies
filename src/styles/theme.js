@@ -10,7 +10,7 @@ export const theme = {
       blue: "#f6f9fb",
     },
   },
-  transition: "0.3s ease-out",
+  transition: "0.2s ease-in-out",
   box: {
     shadow: {
       darken: "0 0 8px rgba(140, 140, 140, 0.4)",

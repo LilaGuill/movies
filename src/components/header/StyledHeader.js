@@ -1,14 +1,7 @@
 import styled from "styled-components"
 
-const StyledHeader = styled.div`
-  width: 100%;
+export const StyledHeader = styled.header`
   height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  h1 {
-    font-size: 26px;
-  }
+  display: grid;
+  place-items: center;
 `
-export default StyledHeader

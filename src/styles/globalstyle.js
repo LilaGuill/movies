@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,7 +62,7 @@ html, body, #root {
 }
 
 h1{
-  font-size:24px;
+  font-size:26px;
 	font-weight:bold;
 }
 h2{
@@ -86,5 +86,3 @@ h6{
 	font-weight:bold;
 }
 `
-
-export default GlobalStyle

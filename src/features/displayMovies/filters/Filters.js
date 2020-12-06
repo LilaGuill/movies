@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useMemo } from "react"
+import React, { useEffect, useState } from "react"
 import Select from "react-select"
 import { useDispatch } from "react-redux"
 import { updateFilters } from "./filtersSlice"
-import StyledFilters from "./StyledFilters"
+import { StyledFilters } from "./StyledFilters"
 
 const Filters = ({ movies }) => {
   const [options, setOptions] = useState([])
