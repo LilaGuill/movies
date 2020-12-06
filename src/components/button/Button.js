@@ -1,9 +1,9 @@
 import React from "react"
 import StyledButton from "./StyledButton"
 
-const Button = ({ type, handleRemoveMovie, children }) => {
+const Button = ({ type, handleClick, children }) => {
   return (
-    <StyledButton type="remove" onClick={() => handleRemoveMovie()}>
+    <StyledButton type={type} onClick={handleClick}>
       {children}
     </StyledButton>
   )
