@@ -30,19 +30,19 @@ export const StyledOption = styled.div`
   height: 25px;
   margin: 0 5px 0;
   cursor: pointer;
-  background: ${({ theme }) => theme.lightGrey};
-  border-radius: 2px;
+  background: ${({ theme }) => theme.color.grey.light};
+  border-radius: ${({ theme }) => theme.border.radius.small};
   display: flex;
   align-items: center;
   justify-content: center;
 
   ${({ selected, theme }) => css`
-    background: ${selected && theme.darkenGrey};
+    background: ${selected && theme.color.grey.darken};
   `}
 
   &:hover {
-    background: ${({ theme }) => theme.mediumGrey};
+    background: ${({ theme }) => theme.color.grey.medium};
     transiton: ${({ theme }) => theme.transition};
-    box-shadow: ${({ theme }) => theme.boxShadow};
+    box-shadow: ${({ theme }) => theme.box.shadow.darken};
   }
 `

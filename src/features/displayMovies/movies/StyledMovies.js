@@ -8,6 +8,6 @@ const StyledMovies = styled.div`
   min-height: 70vh;
   margin: 0 auto;
   background: #f6f9fb;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.border.radius.large};
 `
 export default StyledMovies

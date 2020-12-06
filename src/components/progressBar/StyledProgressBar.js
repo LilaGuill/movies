@@ -7,14 +7,14 @@ const StyledProgress = styled.progress`
 
   ::-webkit-progress-bar {
     height: 10px;
-    border-radius: ${({ theme }) => theme.borderRadius};
-    background: ${({ theme }) => theme.mediumGrey};
+    border-radius: ${({ theme }) => theme.border.radius.large};
+    background: ${({ theme }) => theme.color.grey.medium};
   }
 
   ::-webkit-progress-value {
     height: 10px;
-    border-radius: ${({ theme }) => theme.borderRadius};
-    background: ${({ theme }) => theme.secondaryColor};
+    border-radius: ${({ theme }) => theme.border.radius.large};
+    background: ${({ theme }) => theme.color.secondary};
   }
 `
 export default StyledProgress
