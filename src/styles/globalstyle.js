@@ -27,8 +27,8 @@ a {
 }
 button{
 	border:none;
-	border-radius:5px;
 	padding: 10px 20px;
+	outline:none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -64,36 +64,26 @@ html, body, #root {
 h1{
   font-size:24px;
 	font-weight:bold;
-
 }
-
 h2{
   font-size:22px;
 	font-weight:bold;
-
 }
 h3{
   font-size:20px;
 	font-weight:bold;
-
 }
-
 h4{
   font-size:18px;
 	font-weight:bold;
-
 }
-
 h5{
   font-size:16px;
 	font-weight:bold;
-
 }
-
 h6{
   font-size:14px;
 	font-weight:bold;
-
 }
 `
 

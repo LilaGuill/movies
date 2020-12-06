@@ -8,7 +8,7 @@ export const StyledMovie = styled.div`
   padding: 20px 20px 0 20px;
   box-sizing: border-box;
   border-radius: ${({ theme }) => theme.border.radius.large};
-  box-shadow: ${({ theme }) => theme.boxShadow};
+  box-shadow: ${({ theme }) => theme.box.shadow.lighten};
 
   .content {
     height: 75%;
@@ -23,7 +23,7 @@ export const StyledMovie = styled.div`
   .description {
     height: 70%;
     width: 100%;
-    background: ${({ theme }) => theme.blueGrey};
+    background: ${({ theme }) => theme.color.grey.blue};
     border-radius: ${({ theme }) => theme.border.radius.large};
     display: flex;
     flex-direction: column;
@@ -58,16 +58,16 @@ export const StyledThumb = styled.div`
   gap: 5px;
   height: 30px;
   border-radius: ${({ theme }) => theme.border.radius.large};
-  background: ${({ theme }) => theme.lightGrey};
+  background: ${({ theme }) => theme.color.grey.light};
   display: flex;
   align-items: center;
   cursor: pointer;
   &:hover {
-    background: ${({ theme }) => theme.mediumGrey};
+    background: ${({ theme }) => theme.color.grey.medium};
   }
   ${({ selected, theme }) =>
     css`
-      background: ${selected && theme.darkenGrey};
+      background: ${selected && theme.color.grey.darken};
     `}
 
   .has-small-margin-top {

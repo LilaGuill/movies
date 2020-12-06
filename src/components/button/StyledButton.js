@@ -6,17 +6,17 @@ const StyledButton = styled.button`
   border-style: solid;
   opacity: 0.7;
   font-weight: bold;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.border.radius.large};
 
   ${({ type, theme }) =>
     css`
-      background: ${type === "remove" ? theme.redColor : theme.primaryColor};
+      background: ${type === "remove" ? theme.color.red : theme.color.primary};
     `}
   &:hover {
     cursor: pointer;
     opacity: 1;
     transiton: ${({ theme }) => theme.transition};
-    box-shadow: ${({ theme }) => theme.boxShadow};
+    box-shadow: ${({ theme }) => theme.box.shadow.darken};
   }
 `
 export default StyledButton
